@@ -22,7 +22,7 @@ int main()
 	int Input[5] = { 2, 5, 6, 1, 10 };
 	int arr_size = sizeof(Input) / sizeof(int);
 	int target = 8;
-	struct _hash Hash[5];
+	struct _hash Hash[arr_size];
 
 	for (int i = 0; i < arr_size; i++)
 	{

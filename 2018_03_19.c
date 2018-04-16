@@ -16,17 +16,21 @@
 
 이 문제는 0을 오른쪽으로 옮기는것보다 0이 아닌 정수를 왼쪽으로 옮긴다고 생각하면 쉽게 풀수 있습니다.
 
-void solve(int[] input) {
+void solve(int[] input)
+{
     int position = 0; // 0이 아닌 정수가 들어갈 곳
-    for (int i = 0; i < input.length; i++) {
-        if (input[i] != 0) {
+    for (int i = 0; i < input.length; i++)
+    {
+        if (input[i] != 0)
+        {
             swap(input, i, position);
             position++;
         }
     }
 }
 
-void swap(int[] arr, int a, int b) {
+void swap(int[] arr, int a, int b)
+{
     if (a == b) return;
     int temp = arr[a];
     arr[a] = arr[b];

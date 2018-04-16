@@ -9,7 +9,7 @@
   *
   * Input: {{3,6}, {1,3}, {2,4}}
   * Output: {{1,6}}
-  * 
+  *
 */
 /*
   풀이
@@ -28,19 +28,24 @@
   정렬은 언어마다 있는 정렬 함수를 써도 되고, 아니면 직접 정렬 알고리즘을 써서 정렬해도 상관없습니다.
   정렬된 원소들은 처음부터 하나씩 보면서 현재 원소의 end값과 다음 원소의 start값을 비교하여 겹치면 두 원소를 합치면 됩니다.
 
-  int compare(Interval a, Interval b) {
+  int compare(Interval a, Interval b)
+  {
     return a.start < b.start ? -1 : a.start == b.start ? 0 : 1;
   }
-  List<Interval> merge(List<Interval> intervals) {
+  List<Interval> merge(List<Interval> intervals)
+  {
     sort(intervals, compare);
     LinkedList<Interval> solution = new LinkedList<Interval>();
     solution.add(intervals[0]);
-    for (int i = 1; i < intervals.length; i++) {
+    for (int i = 1; i < intervals.length; i++)
+    {
         Interval interval = intervals[i];
-        if (solution.getLast().end < interval.start) {
+        if (solution.getLast().end < interval.start)
+        {
             solution.add(interval);
         }
-        else {
+        else
+        {
             solution.getLast().end =
                 Math.max(solution.getLast().end, interval.end);
         }

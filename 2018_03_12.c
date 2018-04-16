@@ -15,7 +15,8 @@
 
 이 문제는 긴 string 을 각 단어로 나눈 다음, 각 단어를 거꾸로 하고, 모든 단어들을 합치면 풀수 있습니다.
 
-public String reverseString(String s) {
+public String reverseString(String s)
+{
     String words[] = split(s);
     StringBuilder res = new StringBuilder();
     for (String word: words)
@@ -23,21 +24,26 @@ public String reverseString(String s) {
     return res.toString().trim();
 }
 
-public String[] split(String s) {
+public String[] split(String s)
+{
     ArrayList <String> words = new ArrayList <>();
     StringBuilder word = new StringBuilder();
-    for (int i = 0; i < s.length(); i++) {
-        if (s.charAt(i) == ' ') {
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s.charAt(i) == ' ')
+        {
             words.add(word.toString());
             word = new StringBuilder();
-        } else
+        }
+        else
             word.append(s.charAt(i));
     }
     words.add(word.toString());
     return words.toArray(new String[words.size()]);
 }
 
-public String reverse(String s) {
+public String reverse(String s)
+{
     StringBuilder res = new StringBuilder();
     for (int i = 0; i < s.length(); i++)
         res.insert(0,s.charAt(i));

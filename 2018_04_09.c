@@ -27,42 +27,45 @@ a[0]*a[1]*a[2]*a[3]
 그럼 여기서 두개의 배열을 만들어줍니다. O(n)*2 = O(n)
 
 int one[N]; int product = 1;
-for(int i = 0; i < N; i++) {
+for(int i = 0; i < N; i++)
+{
     one[i] = product;
     product *= input[i];
 }
 int two[N]; int product = 1;
-for(int i = N-1; i >= 0; i--) {
+for(int i = N-1; i >= 0; i--)
+{
     two[i] = product;
     product *= input[i];
 }
 
 int[] one = [
-1,
-a[0],
-a[0]*a[1],
-a[0]*a[1]*a[2],
-a[0]*a[1]*a[2]*a[3]
-]
+                1,
+                a[0],
+                a[0]*a[1],
+                a[0]*a[1]*a[2],
+                a[0]*a[1]*a[2]*a[3]
+                ]
 int[] two = [
-a[1]*a[2]*a[3]*a[4],
-a[2]*a[3]*a[4],
-a[3]*a[4],
-a[4],
-1
-]
+                a[1]*a[2]*a[3]*a[4],
+                a[2]*a[3]*a[4],
+                a[3]*a[4],
+                a[4],
+                1
+                ]
 int[] output = [
-a[1]*a[2]*a[3]*a[4],
-a[0]*a[2]*a[3]*a[4],
-a[0]*a[1]*a[3]*a[4],
-a[0]*a[1]*a[2]*a[4],
-a[0]*a[1]*a[2]*a[3]
-]
+                a[1]*a[2]*a[3]*a[4],
+                a[0]*a[2]*a[3]*a[4],
+                a[0]*a[1]*a[3]*a[4],
+                a[0]*a[1]*a[2]*a[4],
+                a[0]*a[1]*a[2]*a[3]
+                ]
 
 array one 과 array two 의 각 원소들을 서로 곱해주면 array output 이 나옵니다.
 
 int output[N]
-for(int i = 0; i < N; i++) {
+for(int i = 0; i < N; i++)
+{
     output[i] = one[i]*two[i];
 }
 

@@ -1,20 +1,18 @@
-/*
-    *
-    *   String이 주어지면, 중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이를 찾으시오.
-    *
-    *   예제)
-    *
-    *   Input: “aabcbcbc”
-    *   Output: 3 // “abc”
-    *
-    *   Input: “aaaaaaaa”
-    *   Output: 1 // “a”
-    *
-    *   Input: “abbbcedd”
-    *   Output: 4 // “bced”
-    *
-*/
-/*
+
+# String이 주어지면, 중복된 char가 없는 가장 긴 서브스트링 (substring)의 길이를 찾으시오.
+#
+# 예제)
+#
+# Input: “aabcbcbc”
+# Output: 3 // “abc”
+#
+# Input: “aaaaaaaa”
+# Output: 1 // “a”
+#
+# Input: “abbbcedd”
+# Output: 4 // “bced”
+
+'''
 풀이
 
 이 문제는 해쉬맵을 사용하여 char와 char의 인덱스를 저장하여 풀면 됩니다.
@@ -40,4 +38,4 @@ int longestSubstringLength(String s)
 
 시간 복잡도: O(n) // n 은 input string 의 길이.
 공간 복잡도: O(n)
-*/
+'''

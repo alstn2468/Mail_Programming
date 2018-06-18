@@ -1,16 +1,14 @@
-/*
-  *
-  * 정수 배열(int array)이 주어지면 두번째로 큰 값을 프린트하시오.
-  *
-  * 예제
-  * Input: [10, 5, 4, 3, -1]
-  * Output: 5
-  *
-  * Input: [3, 3, 3]
-  * Output: Does not exist.
-  *
-*/
-/*
+
+# 정수 배열(int array)이 주어지면 두번째로 큰 값을 프린트하시오.
+#
+# 예제
+# Input: [10, 5, 4, 3, -1]
+# Output: 5
+#
+# Input: [3, 3, 3]
+# Output: Does not exist.
+
+'''
 풀이
 
 이 문제는 긴 string 을 각 단어로 나눈 다음, 각 단어를 거꾸로 하고, 모든 단어들을 합치면 풀수 있습니다.
@@ -53,4 +51,4 @@ public String reverse(String s)
 주로 인터뷰 중에는 split, reverse 등 과 같은 언어에 포함되어있는 함수를 쓰지 못하는 경우가 있습니다.
 시간 복잡도: O(n), n = string 의 길이.
 공간 복잡도: O(n)
-*/
+'''

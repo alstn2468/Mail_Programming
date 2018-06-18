@@ -1,13 +1,11 @@
-/*
-  *
-  * 주어진 string 에 모든 단어를 거꾸로 하시오.
-  *
-  * 예제
-  * Input: “abc 123 apple”
-  * Output: “cba 321 elppa”
-  *
-*/
-/*
+
+# 주어진 string 에 모든 단어를 거꾸로 하시오.
+#
+# 예제
+# Input: “abc 123 apple”
+# Output: “cba 321 elppa”
+
+'''
 풀이
 
 이 문제는 가장 큰 값을 구하는 로직과 거의 똑같습니다.
@@ -50,4 +48,4 @@ void secondLargest(int[] arr)
 
 시간 복잡도: O(n)
 공간 복잡도: O(1)
-*/
+'''

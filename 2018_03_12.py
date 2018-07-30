@@ -11,44 +11,44 @@
 '''
 풀이
 
-이 문제는 긴 string 을 각 단어로 나눈 다음, 각 단어를 거꾸로 하고, 모든 단어들을 합치면 풀수 있습니다.
+이 문제는 가장 큰 값을 구하는 로직과 거의 똑같습니다.
+가장 큰 값과 두번째 큰 값을 저장할 변수를 만들고 배열 원소들과 비교하면 됩니다.
+중요한 엣지 케이스는 배열이 0 이나 1개의 원소를 가지고 있으면 두번째 큰 값이
+존재 하지 않는것과 [3, 3, 3] 같은 경우 처럼 두번째로 큰 값은 존재 하지 않는겁니다.
+이를 계산하기위해 두번째 큰 값을 저장할 변수를 Integer.MIN_VALUE로 두고
+for루프가 끝난뒤 값이 변했는지 체크하면 됩니다.
 
-public String reverseString(String s)
+void secondLargest(int[] arr)
 {
-    String words[] = split(s);
-    StringBuilder res = new StringBuilder();
-    for (String word: words)
-        res.append(reverse(word) + " ");
-    return res.toString().trim();
-}
-
-public String[] split(String s)
-{
-    ArrayList <String> words = new ArrayList <>();
-    StringBuilder word = new StringBuilder();
-    for (int i = 0; i < s.length(); i++)
+    int first, second;
+    if (arr.length < 2)
     {
-        if (s.charAt(i) == ' ')
-        {
-            words.add(word.toString());
-            word = new StringBuilder();
-        }
-        else
-            word.append(s.charAt(i));
+        print("두번째로 큰 값은 없습니다.");
+        return;
     }
-    words.add(word.toString());
-    return words.toArray(new String[words.size()]);
+    first = second = Integer.MIN_VALUE;
+    for (int i = 0; i < arr.length; i++)
+    {
+        if (arr[i] > first)
+        {
+            second = first;
+            first = arr[i];
+        }
+        else if (arr[i] > second && arr[i] != first)
+        {
+            second = arr[i];
+        }
+    }
+    if (second == Integer.MIN_VALUE)
+    {
+        print("두번째로 큰 값은 없습니다.");
+    }
+    else
+    {
+        print(second);
+    }
 }
 
-public String reverse(String s)
-{
-    StringBuilder res = new StringBuilder();
-    for (int i = 0; i < s.length(); i++)
-        res.insert(0,s.charAt(i));
-    return res.toString();
-}
-
-주로 인터뷰 중에는 split, reverse 등 과 같은 언어에 포함되어있는 함수를 쓰지 못하는 경우가 있습니다.
-시간 복잡도: O(n), n = string 의 길이.
-공간 복잡도: O(n)
+시간 복잡도: O(n)
+공간 복잡도: O(1)
 '''

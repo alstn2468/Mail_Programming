@@ -9,3 +9,13 @@
 #
 # input: 13 // 1101
 # output: 3
+
+input = 13
+input = bin(input)
+sum = 0
+
+for i in input :
+    if i is '1' :
+        sum += 1
+
+print(sum)

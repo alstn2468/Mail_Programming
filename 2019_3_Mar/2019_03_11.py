@@ -3,23 +3,23 @@
 #
 # Given an integer, check if it is a power of 4.
 
-num = input()
-
-if int(num) % 4 == 0:
-    if len(num) >= 3:
-        if num[:-1] == 0 and num[:-2] == 0:
-            print("This num is 4's square")
-
-        else:
-            print("This num is not 4's square")
+def is_power_of_four(num):
+    if num == 0:
+        return False
 
     else:
-        print("This num is 4's square")
+        while num != 1:
+            if num % 4 != 0:
+                return False
+
+            num = num // 4
+
+        return True
+
+num = int(input())
+
+if is_power_of_four(num):
+    print("This num {} is power of 4".format(num))
 
 else:
-    print("This num is not 4's square")
-
-
-'''
-어... 예외 발견
-'''
+    print("This num {} is not power of 4".format(num))

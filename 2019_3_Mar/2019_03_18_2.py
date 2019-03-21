@@ -22,17 +22,23 @@ arr.remove(random.randrange(100))
 misiing_one_val_in_arr = arr
 missing_val = before - sum(misiing_one_val_in_arr)
 
-print("\nThis is Missing Integer :", before - sum(misiing_one_val_in_arr), "\n")
+print("\nThis is Missing Integer :", missing_val, "\n")
 
 print("- After Integer Array -")
+
+j = 0
 
 for i, val in enumerate(misiing_one_val_in_arr):
     if i == missing_val:
         print("     | %3d |" % val, end="")
+        j += 1
+        
     else:
         print(" %3d |" % val, end="")
 
-    if (i + 1) % 10 == 0:
+    if (j + 1) % 10 == 0:
         print()
+
+    j += 1
 
 print()

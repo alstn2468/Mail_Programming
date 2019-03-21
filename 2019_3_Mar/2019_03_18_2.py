@@ -28,11 +28,11 @@ print("- After Integer Array -")
 
 for i, val in enumerate(misiing_one_val_in_arr):
     if i == missing_val:
-        print("     |", end="")
+        print("     | %3d |" % val, end="")
     else:
         print(" %3d |" % val, end="")
 
     if (i + 1) % 10 == 0:
         print()
 
-print("     |")
+print()

@@ -29,16 +29,9 @@ print("- After Integer Array -")
 j = 0
 
 for i, val in enumerate(misiing_one_val_in_arr):
-    if i == missing_val:
-        print("     | %3d |" % val, end="")
-        j += 1
-        
-    else:
-        print(" %3d |" % val, end="")
+    print(" %3d |" % val, end="")
 
-    if (j + 1) % 10 == 0:
+    if (i + 1) % 10 == 0:
         print()
 
-    j += 1
-
-print()
+print("     |")

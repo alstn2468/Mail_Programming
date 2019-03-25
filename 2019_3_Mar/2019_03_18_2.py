@@ -26,8 +26,6 @@ print("\nThis is Missing Integer :", missing_val, "\n")
 
 print("- After Integer Array -")
 
-j = 0
-
 for i, val in enumerate(misiing_one_val_in_arr):
     print(" %3d |" % val, end="")
 
